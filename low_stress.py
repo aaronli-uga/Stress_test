@@ -2,7 +2,7 @@
 Author: Qi7
 Date: 2022-11-18 14:48:17
 LastEditors: aaronli-uga ql61608@uga.edu
-LastEditTime: 2022-11-18 15:20:38
+LastEditTime: 2022-11-18 15:32:36
 Description: 
 '''
 import time
@@ -31,11 +31,11 @@ if cmd == "q":
 
 
 # 300 second
-S = th.Timer(5, shutdown)
+S = th.Timer(test_time, shutdown)
 S.start()
 
 while num_questions:
-    print(f"current score: {score}/30")
+    print(f"current score: {score}")
     a, b = randint(1, 100), randint(1, 100)
     userText, timedOut = timedInput(f"{a} + {b} = ?\n", timeout=t)
     if(timedOut):
