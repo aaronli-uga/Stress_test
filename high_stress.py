@@ -23,7 +23,7 @@ def shutdown():
 
 score = 0
 t = 10 # 10 seconds per question
-num_questions = 30 # 5 mins test. 10 questions per mintus
+# num_questions = 30 # 5 mins test. 10 questions per mintus
 test_time = 300
 sound_file = "sounds/annoying.mp3"
 
@@ -36,7 +36,7 @@ if cmd == "q":
 S = th.Timer(test_time, shutdown)
 S.start()
 
-while num_questions:
+while True:
     print(f"current score: {score}")
     a, b = randint(1, 100), randint(1, 100)
     userText, timedOut = timedInput(f"{a} X {b} = ?\n", timeout=t)
